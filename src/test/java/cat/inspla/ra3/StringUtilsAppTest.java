@@ -6,13 +6,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StringUtilsAppTest {
 
+    // Creem l’objecte de la classe que volem provar
     private final StringUtilsApp utils = new StringUtilsApp();
 
     @ParameterizedTest
     @CsvSource({
-        // TODO
+            "'Hola    món', 'Hola món'",
+            "'   Java   test   ', 'Java test'"
     })
-    void TODO_normalizeSpacesRedueixEspaisMultiples(String input, String expected) {
-        // TODO
+    void normalizeSpacesRedueixEspaisMultiples(String input, String expected) {
+
+        // Comprovem que el mètode elimina espais sobrants correctament
+        assertEquals(expected, utils.normalizeSpaces(input));
     }
 }

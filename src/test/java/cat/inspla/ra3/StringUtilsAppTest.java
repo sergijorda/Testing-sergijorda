@@ -12,7 +12,8 @@ class StringUtilsAppTest {
     @ParameterizedTest
     @CsvSource({
             "'Hola    món', 'Hola món'",
-            "'   Java   test   ', 'Java test'"
+            "'   Java   test   ', 'Java test'",
+            "'a   b    c', 'a b c'"
     })
     void normalizeSpacesRedueixEspaisMultiples(String input, String expected) {
 
